@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  resources :books
+  devise_for :admins
+  resources :issus
+  resources :studets, param: :sid
+  resources :allbks
+  devise_for :studs
+  resources :bks, param: :isbn
+  get 'welcome/index', to: "welcome#index"
+  root 'home#index' 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Issus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sid</th>
+      <th>Allbk</th>
+      <th>Issue date</th>
+      <th>Return date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @issus.each do |issu| %>
+      <tr>
+        <td><%= issu.sid %></td>
+        <td><%= issu.allbk_id %></td>
+        <td><%= issu.issue_date %></td>
+        <td><%= issu.return_date %></td>
+        <td><%= link_to 'Show', issu %></td>
+        <td><%= link_to 'Edit', edit_issu_path(issu) %></td>
+        <td><%= link_to 'Destroy', issu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Issu', new_issu_path %>

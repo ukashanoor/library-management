@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @bk.isbn %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @bk.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bk.title %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @bk.publication %>
+</p>
+
+<p>
+  <strong>Copies:</strong>
+  <%= @bk.copies %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @bk.available %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @bk.subject %>
+</p>
+
+<%= link_to 'Edit', edit_bk_path(@bk) %> |
+<%= link_to 'Back', bks_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @allbk.isbn %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @allbk.issue %>
+</p>
+
+<%= link_to 'Edit', edit_allbk_path(@allbk) %> |
+<%= link_to 'Back', allbks_path %>

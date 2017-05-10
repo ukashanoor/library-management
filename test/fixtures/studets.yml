@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sid: MyString
+  name: MyString
+  dob: 2017-05-10
+  year: 1
+  branch: MyString
+
+two:
+  sid: MyString
+  name: MyString
+  dob: 2017-05-10
+  year: 1
+  branch: MyString

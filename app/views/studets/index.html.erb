@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Studets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sid</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th>Year</th>
+      <th>Branch</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studets.each do |studet| %>
+      <tr>
+        <td><%= studet.sid %></td>
+        <td><%= studet.name %></td>
+        <td><%= studet.dob %></td>
+        <td><%= studet.year %></td>
+        <td><%= studet.branch %></td>
+        <td><%= link_to 'Show', studet %></td>
+        <td><%= link_to 'Edit', edit_studet_path(studet) %></td>
+        <td><%= link_to 'Destroy', studet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Studet', new_studet_path %>

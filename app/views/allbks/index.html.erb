@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Allbks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Issue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @allbks.each do |allbk| %>
+      <tr>
+        <td><%= allbk.isbn %></td>
+        <td><%= allbk.issue %></td>
+        <td><%= link_to 'Show', allbk %></td>
+        <td><%= link_to 'Edit', edit_allbk_path(allbk) %></td>
+        <td><%= link_to 'Destroy', allbk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Allbk', new_allbk_path %>
