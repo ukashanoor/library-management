@@ -1,6 +1,11 @@
 class BksController < ApplicationController
   before_action :set_bk, only: [:show, :edit, :update, :destroy]
 
+  def search
+    if params[:search].present?
+      @bks = Bk.search(params[:search])
+    end
+  end
   # GET /bks
   # GET /bks.json
   def index
